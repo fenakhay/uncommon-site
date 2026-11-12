@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Uncommon: سكربتات المستخدم لويكيات ويكيميديا</title>
+    <meta
+      name="description"
+      content="يشغّل سكربتاتك على ويكيات ويكيميديا من متصفحك بدلًا من common.js، قبل أن تجهز الصفحة."
+    />
+    <link rel="icon" href="../icon.png" />
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="alternate" hreflang="en" href="https://uncommon.fenakhay.com/" />
+    <link rel="alternate" hreflang="fr" href="https://uncommon.fenakhay.com/fr/" />
+    <link rel="alternate" hreflang="ar" href="https://uncommon.fenakhay.com/ar/" />
+    <link rel="alternate" hreflang="de" href="https://uncommon.fenakhay.com/de/" />
+    <link rel="alternate" hreflang="nl" href="https://uncommon.fenakhay.com/nl/" />
+    <link rel="alternate" hreflang="mt" href="https://uncommon.fenakhay.com/mt/" />
+  </head>
+  <body>
+    <nav class="languages">
+      <a href="../" hreflang="en" lang="en">English</a> ·
+      <a href="../fr/" hreflang="fr" lang="fr">Français</a> · <strong>العربية</strong> ·
+      <a href="../de/" hreflang="de" lang="de">Deutsch</a> ·
+      <a href="../nl/" hreflang="nl" lang="nl">Nederlands</a> ·
+      <a href="../mt/" hreflang="mt" lang="mt">Malti</a>
+    </nav>
+    <header>
+      <img src="../icon.png" alt="" width="96" height="96" />
+      <div>
+        <h1>Uncommon</h1>
+        <p class="summary">
+          يشغّل سكربتاتك على ويكيات ويكيميديا من متصفحك بدلًا من common.js، قبل أن تجهز الصفحة.
+        </p>
+      </div>
+    </header>
+    <main>
+      <h2>التثبيت</h2>
+      <p class="soon">قريبًا على Chrome Web Store وFirefox Add-ons وMicrosoft Edge Add-ons.</p>
+      <p>
+        يشغّل Uncommon سكربتات المستخدم وأوراق الأنماط الخاصة بك على ويكيميديا من نسخة محفوظة في
+        متصفحك، بدلًا من صفحة common.js.
+      </p>
+      <p>
+        السكربت المحمَّل من common.js ينتظر في كل عرض صفحة سلسلة من الطلبات: الصفحة، ووحدة البدء،
+        ووحدة user، ثم طلبًا إضافيًا لكل importScript. أما Uncommon فيحفظ نص كل سكربت في المتصفح،
+        فيحقنه المتصفح قبل سكربتات الصفحة نفسها. ولا ينتظر السكربت إلا ما يحتاج إليه من الصفحة، ولا
+        يُرسل أي طلب لجلب السكربت نفسه.
+      </p>
+      <ul>
+        <li>
+          الملفات الشخصية: ملف لكل حساب ويكي. لا تعمل سكربتات الملف الشخصي إلا ما دام ذلك الحساب
+          مسجَّل الدخول، وعلى الويكيات التي تختارها: ويكي واحد أو عدة ويكيات أو كل ويكيات ويكيميديا.
+        </li>
+        <li>
+          الاستيراد: يقرأ common.js أو common.css أو global.js أو global.css الخاصة بك، ويسرد كل
+          صفحة تحمّلها، ويضيف ما تختاره منها.
+        </li>
+        <li>
+          التحديثات: تتبع صفحاتك الويكي كلما حفظتها. أما مراجعة محرر آخر فتنتظر حتى تقرأ الفرق
+          وتعتمدها، وتواصل المراجعة المعتمدة العمل في الأثناء.
+        </li>
+        <li>الإضافات: أضف إضافة من الويكي الأساسي سجلًا واحدًا، بسكربتاتها وأنماطها.</li>
+        <li>المسودات: جرّب التغيير في المتصفح قبل حفظه في الويكي.</li>
+        <li>
+          قواعد الصفحات: شغّل السكربت في نطاقات أو إجراءات أو صفحات خاصة أو نماذج محتوى معيّنة فقط.
+        </li>
+        <li>النشاط: اعرف متى عمل كل سكربت في آخر 200 تحميل صفحة، ولماذا تُخطّي أحدها أو فشل.</li>
+      </ul>
+      <p>
+        لا يمكن إضافة إلا الصفحات الفرعية من User: وصفحات MediaWiki:، وهي صفحات لا يعدّلها إلا
+        صاحبها أو إداريو الويكي. يقرأ Uncommon واجهة Action API للويكيات دون تسجيل دخول، ولا شيء
+        غيرها. ولا يعدّل أي ويكي أبدًا ولا يرسل شيئًا إلى أي جهة: تبقى سكربتاتك وإعداداتك وتقاريرك
+        في متصفحك.
+      </p>
+      <p>
+        قبل أن يشغّل السكربتات، يطلب منك المتصفح السماح بسكربتات المستخدم. في كروم وإيدج، فعّل
+        «Allow User Scripts» في صفحة تفاصيل الامتداد؛ وفي فايرفوكس، اختر «اسمح» في لوحة التحكم.
+        وتعرض لوحة التحكم الخطوات.
+      </p>
+      <p>يتوفر Uncommon بالإنجليزية والفرنسية والعربية والألمانية والهولندية والمالطية.</p>
+      <figure>
+        <img
+          src="../images/ar/scripts.png"
+          alt="قائمة السكربتات في لوحة التحكم"
+          width="1280"
+          height="800"
+        />
+      </figure>
+      <figure>
+        <img
+          src="../images/ar/update.png"
+          alt="مراجعة من محرر آخر بانتظار التدقيق"
+          width="1280"
+          height="800"
+        />
+      </figure>
+    </main>
+    <footer>
+      <a href="../privacy.html">سياسة الخصوصية</a> ·
+      <a href="../support.html">الدعم</a>
+      <p>من صنع Fenakhay. منشور بموجب رخصة موزيلا العامة 2.0.</p>
+    </footer>
+  </body>
+</html>

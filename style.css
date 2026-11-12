@@ -1,0 +1,124 @@
+/* The site of Uncommon, in the colors of Wikimedia's Codex: light by default, dark when the reader's system is. */
+
+:root {
+  color-scheme: light dark;
+  --background: #f8f9fa;
+  --surface: #fff;
+  --text: #202122;
+  --subtle: #54595d;
+  --border: #c8ccd1;
+  --link: #36c;
+  --button-text: #fff;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #101418;
+    --surface: #202122;
+    --text: #eaecf0;
+    --subtle: #a2a9b1;
+    --border: #54595d;
+    --link: #88a3e8;
+    --button-text: #101418;
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  max-inline-size: 60rem;
+  margin: 0 auto;
+  padding: 1.5rem 1rem 3rem;
+  background-color: var(--background);
+  color: var(--text);
+  font-family: system-ui, sans-serif;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+a {
+  color: var(--link);
+}
+
+.languages {
+  margin-block-end: 2rem;
+  color: var(--subtle);
+  font-size: 0.875rem;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  margin-block-end: 1.5rem;
+}
+
+header img {
+  flex-shrink: 0;
+  border-radius: 1.25rem;
+}
+
+h1 {
+  margin: 0;
+  font-size: 2.5rem;
+  line-height: 1.2;
+}
+
+h2 {
+  margin-block: 2rem 0.75rem;
+  font-size: 1.5rem;
+}
+
+h3 {
+  margin-block: 1.5rem 0.5rem;
+  font-size: 1.125rem;
+}
+
+.summary,
+.soon {
+  margin: 0.25rem 0 0;
+  color: var(--subtle);
+  font-size: 1.125rem;
+}
+
+.stores {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.button {
+  padding: 0.5rem 1rem;
+  border-radius: 0.25rem;
+  background-color: var(--link);
+  color: var(--button-text);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+figure {
+  margin: 2rem 0;
+}
+
+figure img {
+  display: block;
+  inline-size: 100%;
+  block-size: auto;
+  border: 1px solid var(--border);
+  border-radius: 0.5rem;
+}
+
+code {
+  font-size: 0.9em;
+  overflow-wrap: anywhere;
+}
+
+footer {
+  margin-block-start: 3rem;
+  padding-block-start: 1rem;
+  border-block-start: 1px solid var(--border);
+  color: var(--subtle);
+  font-size: 0.875rem;
+}

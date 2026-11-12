@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="de" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Uncommon: Benutzerskripte für Wikimedia-Wikis</title>
+    <meta
+      name="description"
+      content="Führt Ihre Benutzerskripte auf Wikimedia-Wikis aus Ihrem Browser statt aus common.js aus, noch bevor die Seite bereit ist."
+    />
+    <link rel="icon" href="../icon.png" />
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="alternate" hreflang="en" href="https://uncommon.fenakhay.com/" />
+    <link rel="alternate" hreflang="fr" href="https://uncommon.fenakhay.com/fr/" />
+    <link rel="alternate" hreflang="ar" href="https://uncommon.fenakhay.com/ar/" />
+    <link rel="alternate" hreflang="de" href="https://uncommon.fenakhay.com/de/" />
+    <link rel="alternate" hreflang="nl" href="https://uncommon.fenakhay.com/nl/" />
+    <link rel="alternate" hreflang="mt" href="https://uncommon.fenakhay.com/mt/" />
+  </head>
+  <body>
+    <nav class="languages">
+      <a href="../" hreflang="en" lang="en">English</a> ·
+      <a href="../fr/" hreflang="fr" lang="fr">Français</a> ·
+      <a href="../ar/" hreflang="ar" lang="ar">العربية</a> · <strong>Deutsch</strong> ·
+      <a href="../nl/" hreflang="nl" lang="nl">Nederlands</a> ·
+      <a href="../mt/" hreflang="mt" lang="mt">Malti</a>
+    </nav>
+    <header>
+      <img src="../icon.png" alt="" width="96" height="96" />
+      <div>
+        <h1>Uncommon</h1>
+        <p class="summary">
+          Führt Ihre Benutzerskripte auf Wikimedia-Wikis aus Ihrem Browser statt aus common.js aus,
+          noch bevor die Seite bereit ist.
+        </p>
+      </div>
+    </header>
+    <main>
+      <h2>Installieren</h2>
+      <p class="soon">
+        Bald im Chrome Web Store, bei Firefox Add-ons und bei Microsoft Edge Add-ons.
+      </p>
+      <p>
+        Uncommon führt Ihre Benutzerskripte und Stylesheets für Wikimedia aus einer Kopie in Ihrem
+        Browser aus, statt aus Ihrer common.js.
+      </p>
+      <p>
+        Ein Skript aus der common.js wartet bei jedem Seitenaufruf auf eine Kette von Anfragen: die
+        Seite, das Startmodul, das Modul user und je eine weitere Anfrage für jedes importScript.
+        Uncommon hält den Text jedes Skripts im Browser, der ihn vor den Skripten der Seite einfügt.
+        Das Skript wartet nur auf das, was es von der Seite braucht, und für das Skript selbst wird
+        keine Anfrage gestellt.
+      </p>
+      <ul>
+        <li>
+          Profile: eines für jedes Wiki-Konto. Die Skripte eines Profils laufen nur, solange dieses
+          Konto angemeldet ist, auf den Wikis Ihrer Wahl: einem, mehreren oder allen
+          Wikimedia-Wikis.
+        </li>
+        <li>
+          Import: liest Ihre common.js, common.css, global.js oder global.css, listet jede Seite
+          auf, die sie lädt, und fügt die gewählten hinzu.
+        </li>
+        <li>
+          Aktualisierungen: Ihre eigenen Seiten folgen dem Wiki, sobald Sie speichern. Eine Version
+          eines anderen Benutzers wartet, bis Sie ihren Diff gelesen und genehmigt haben; bis dahin
+          läuft die genehmigte Version weiter.
+        </li>
+        <li>
+          Helferlein: fügen Sie ein Helferlein Ihres Heimatwikis als einen Eintrag hinzu, mit seinen
+          Skripten und Styles.
+        </li>
+        <li>
+          Entwürfe: probieren Sie eine Änderung im Browser aus, bevor Sie sie im Wiki speichern.
+        </li>
+        <li>
+          Seitenregeln: führen Sie ein Skript nur in bestimmten Namensräumen, Aktionen,
+          Spezialseiten oder Inhaltsmodellen aus.
+        </li>
+        <li>
+          Aktivität: sehen Sie, wann jedes Skript bei den letzten 200 Seitenaufrufen lief und warum
+          eines übersprungen wurde oder fehlschlug.
+        </li>
+      </ul>
+      <p>
+        Hinzufügen lassen sich nur Unterseiten von User: und Seiten in MediaWiki:, also Seiten, die
+        nur ihr Besitzer oder die Administratoren des Wikis bearbeiten können. Uncommon liest anonym
+        die Action API der Wikis und sonst nichts. Es bearbeitet nie ein Wiki und sendet nichts
+        irgendwohin: Ihre Skripte, Einstellungen und Berichte bleiben in Ihrem Browser.
+      </p>
+      <p>
+        Bevor Skripte laufen können, bittet Ihr Browser Sie, Benutzerskripte zu erlauben. Schalten
+        Sie in Chrome und Edge auf der Detailseite der Erweiterung „Allow User Scripts“ ein; wählen
+        Sie in Firefox „Erlauben“ in der Übersicht. Die Übersicht zeigt die Schritte.
+      </p>
+      <p>
+        Uncommon gibt es auf Englisch, Französisch, Arabisch, Deutsch, Niederländisch und
+        Maltesisch.
+      </p>
+      <figure>
+        <img
+          src="../images/de/scripts.png"
+          alt="Die Liste der Skripte in der Übersicht"
+          width="1280"
+          height="800"
+        />
+      </figure>
+      <figure>
+        <img
+          src="../images/de/update.png"
+          alt="Eine Version eines anderen Benutzers, die auf Prüfung wartet"
+          width="1280"
+          height="800"
+        />
+      </figure>
+    </main>
+    <footer>
+      <a href="../privacy.html">Datenschutzerklärung</a> ·
+      <a href="../support.html">Hilfe</a>
+      <p>Von Fenakhay. Veröffentlicht unter der Mozilla Public License 2.0.</p>
+    </footer>
+  </body>
+</html>

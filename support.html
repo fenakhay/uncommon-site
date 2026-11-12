@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Uncommon: support</title>
+    <link rel="icon" href="icon.png" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <nav class="languages"><a href="./">Uncommon</a></nav>
+    <main>
+      <h1>Support</h1>
+      <p class="summary">
+        Questions, problems and ideas go to
+        <a href="https://meta.wikimedia.org/wiki/User_talk:Fenakhay">User talk:Fenakhay</a> on
+        Meta-Wiki. Say which browser and which version of Uncommon you use, and which script is
+        concerned.
+      </p>
+
+      <h2>What it needs</h2>
+      <ul>
+        <li>Chrome or Microsoft Edge 138 or later, or Firefox 144 or later.</li>
+        <li>
+          An account on a Wikimedia wiki: the scripts of a profile run only while its account is
+          logged in.
+        </li>
+      </ul>
+
+      <h2>Allowing user scripts</h2>
+      <p>
+        Browsers ask before an extension may run user scripts. The dashboard shows the steps until
+        it is done.
+      </p>
+      <h3>Chrome and Edge</h3>
+      <ol>
+        <li>
+          Open <code>chrome://extensions</code> (Chrome) or <code>edge://extensions</code> (Edge)
+          and choose Details on Uncommon.
+        </li>
+        <li>Switch on "Allow User Scripts".</li>
+      </ol>
+      <h3>Firefox</h3>
+      <ol>
+        <li>On Uncommon's dashboard, choose Allow.</li>
+        <li>Firefox asks in its own prompt for the permission to run user scripts. Allow it.</li>
+      </ol>
+      <p>
+        When a script first runs on a wiki, the browser also asks to let Uncommon reach that wiki.
+        Settings lists the wikis it may not reach yet.
+      </p>
+
+      <h2>Moving over from common.js</h2>
+      <ol>
+        <li>On the dashboard, create a profile with your wiki username.</li>
+        <li>
+          Open Import, read your <code>common.js</code> (or <code>common.css</code>,
+          <code>global.js</code>, <code>global.css</code>) and add the pages it loads.
+        </li>
+        <li>
+          Blank that page on the wiki yourself: Uncommon never edits a wiki. Until then each script
+          runs twice, once from the wiki and once from Uncommon. The page's history keeps the old
+          text.
+        </li>
+      </ol>
+
+      <h2>A script doesn't run</h2>
+      <ul>
+        <li>Check that you are logged in with the account of the profile the script belongs to.</li>
+        <li>
+          Check that the record is switched on and runs on this wiki (its page, Overview, "Runs
+          on").
+        </li>
+        <li>Check its page rules: namespaces, actions, special pages and content models.</li>
+        <li>
+          Nothing runs with <code>?safemode=1</code> in the address, or while Uncommon is paused.
+        </li>
+        <li>
+          The toolbar button's popup shows what ran on the current tab and why a script was skipped;
+          the Activity page shows the last 200 page loads, with the errors scripts threw.
+        </li>
+        <li>
+          A script that relies on its top-level names being globals has to assign them to
+          <code>window</code>
+          itself, since each script runs inside a function.
+        </li>
+      </ul>
+
+      <h2>Updates of a script</h2>
+      <p>
+        Uncommon checks the wikis every 30 minutes (Settings changes the interval), and at once with
+        "Check now". Revisions saved by your own account run straight away. A revision saved by
+        somebody else waits on the record's Updates tab, with its diff, until you approve or skip
+        it; the approved revision keeps running in the meantime.
+      </p>
+
+      <h2>Keeping a copy</h2>
+      <p>
+        Your scripts and settings live in the browser. Settings exports them to a state file, which
+        Settings in another browser imports.
+      </p>
+    </main>
+    <footer>
+      <a href="./">Uncommon</a> · <a href="privacy.html">Privacy policy</a>
+      <p>Made by Fenakhay. Released under the Mozilla Public License 2.0.</p>
+    </footer>
+  </body>
+</html>

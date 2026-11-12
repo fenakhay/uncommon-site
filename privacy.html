@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Uncommon: privacy policy</title>
+    <link rel="icon" href="icon.png" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <nav class="languages"><a href="./">Uncommon</a></nav>
+    <main>
+      <h1>Privacy policy</h1>
+      <p class="summary">Updated on 12 November 2026, for version 1.0.0.</p>
+
+      <p>
+        Uncommon is a browser extension that runs a Wikimedia editor's userscripts and stylesheets
+        from a copy kept in the browser, in place of their <code>common.js</code>. This policy
+        covers the extension as published in the Chrome Web Store, Firefox Add-ons and Microsoft
+        Edge Add-ons.
+      </p>
+
+      <h2>In short</h2>
+      <p>
+        Uncommon collects nothing. What it stores stays in your browser, and the only requests it
+        makes are anonymous queries to the Wikimedia wikis your scripts come from. It has no
+        analytics, no tracking and no advertising, and its author receives no data from it.
+      </p>
+
+      <h2>What Uncommon stores in your browser</h2>
+      <p>Everything below is kept in the extension's own storage on your device:</p>
+      <ul>
+        <li>
+          your settings: the language of its pages, whether it is paused, and how often it checks
+          the wikis;
+        </li>
+        <li>your profiles: the username and the home wiki of each wiki account you add;</li>
+        <li>
+          your records: the wiki pages you added, their approved, previous and waiting revisions
+          (number, date, author, edit summary, size and checksum) with their texts, your drafts, and
+          each record's settings;
+        </li>
+        <li>
+          the reports of the last 200 wiki page loads on which a profile's scripts were due: the
+          address and title of the page, the username the wiki gave, and when each script ran, why
+          it was skipped, or the error it threw;
+        </li>
+        <li>the report of the page open in each tab, until the browser closes.</li>
+      </ul>
+
+      <h2>What Uncommon sends, and to whom</h2>
+      <p>
+        Uncommon sends requests only to the Action API (<code>/w/api.php</code>) of the Wikimedia
+        wikis your records come from. It asks for the pages you added and their latest revisions,
+        for the gadgets of your home wiki when you add one, and for your <code>common.js</code>,
+        <code>global.js</code> or their stylesheets when you import them. The requests carry no
+        cookies and no login: only the titles or revision numbers asked for, and a User-Agent that
+        names Uncommon, its version and this site. What the wikis do with requests is covered by the
+        <a href="https://foundation.wikimedia.org/wiki/Policy:Privacy_policy"
+          >Wikimedia Foundation's privacy policy</a
+        >.
+      </p>
+      <p>
+        Uncommon sends nothing to its author or to anyone else, and it doesn't sell, share or
+        transfer data.
+      </p>
+
+      <h2>The scripts you run</h2>
+      <p>
+        The scripts you add are code written by you or by other editors. They run in the wiki's
+        pages under your account, as they would from your <code>common.js</code>, and what they do
+        is up to them. Only <code>User:</code> subpages and <code>MediaWiki:</code> pages can be
+        added, which only their owner or the wiki's administrators can edit, and a revision saved by
+        another editor runs only once you have approved it.
+      </p>
+
+      <h2>Why it asks for each permission</h2>
+      <ul>
+        <li><strong>User scripts</strong>: to run the scripts you added.</li>
+        <li><strong>Storage</strong>: to keep what is listed above.</li>
+        <li>
+          <strong>Alarms</strong>: to check the wikis for new revisions at the interval you set.
+        </li>
+        <li>
+          <strong>Scripting</strong>: to receive each page's report of which scripts ran, on the
+          wikis you allowed.
+        </li>
+        <li>
+          <strong>Access to a wiki</strong>: asked for one Wikimedia wiki at a time, when one of
+          your scripts first runs there.
+        </li>
+      </ul>
+
+      <h2>Removing your data</h2>
+      <p>
+        The Activity page clears the reports, and Settings removes a profile with its records.
+        Uninstalling the extension removes everything it stored. To keep a copy first, export the
+        state file in Settings.
+      </p>
+
+      <h2>Changes</h2>
+      <p>
+        This page describes the current version. A version that changes what is stored or sent comes
+        with an updated policy here, with its date above.
+      </p>
+
+      <h2>Contact</h2>
+      <p>
+        Questions go to
+        <a href="https://meta.wikimedia.org/wiki/User_talk:Fenakhay">User talk:Fenakhay</a> on
+        Meta-Wiki.
+      </p>
+    </main>
+    <footer>
+      <a href="./">Uncommon</a> · <a href="support.html">Support</a>
+      <p>Made by Fenakhay. Released under the Mozilla Public License 2.0.</p>
+    </footer>
+  </body>
+</html>

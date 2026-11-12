@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Uncommon: userscripts for Wikimedia wikis</title>
+    <meta
+      name="description"
+      content="Runs your userscripts on Wikimedia wikis from your browser in place of common.js, before the page is ready."
+    />
+    <link rel="icon" href="icon.png" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="alternate" hreflang="en" href="https://uncommon.fenakhay.com/" />
+    <link rel="alternate" hreflang="fr" href="https://uncommon.fenakhay.com/fr/" />
+    <link rel="alternate" hreflang="ar" href="https://uncommon.fenakhay.com/ar/" />
+    <link rel="alternate" hreflang="de" href="https://uncommon.fenakhay.com/de/" />
+    <link rel="alternate" hreflang="nl" href="https://uncommon.fenakhay.com/nl/" />
+    <link rel="alternate" hreflang="mt" href="https://uncommon.fenakhay.com/mt/" />
+  </head>
+  <body>
+    <nav class="languages">
+      <strong>English</strong> · <a href="fr/" hreflang="fr" lang="fr">Français</a> ·
+      <a href="ar/" hreflang="ar" lang="ar">العربية</a> ·
+      <a href="de/" hreflang="de" lang="de">Deutsch</a> ·
+      <a href="nl/" hreflang="nl" lang="nl">Nederlands</a> ·
+      <a href="mt/" hreflang="mt" lang="mt">Malti</a>
+    </nav>
+    <header>
+      <img src="icon.png" alt="" width="96" height="96" />
+      <div>
+        <h1>Uncommon</h1>
+        <p class="summary">
+          Runs your userscripts on Wikimedia wikis from your browser in place of common.js, before
+          the page is ready.
+        </p>
+      </div>
+    </header>
+    <main>
+      <h2>Install</h2>
+      <p class="soon">
+        Coming soon to the Chrome Web Store, Firefox Add-ons and Microsoft Edge Add-ons.
+      </p>
+      <p>
+        Uncommon runs your Wikimedia userscripts and stylesheets from a copy kept in your browser,
+        in place of your common.js.
+      </p>
+      <p>
+        A script loaded from common.js waits on every page view for a chain of requests: the page,
+        the startup module, the user module, and one more request for each importScript. Uncommon
+        keeps each script's text in the browser, which injects it before the page's own scripts run.
+        The script waits only for what it needs from the page, and no request is made for the script
+        itself.
+      </p>
+      <ul>
+        <li>
+          Profiles: one for each wiki account. A profile's scripts run only while that account is
+          logged in, on the wikis you choose: one, several or all Wikimedia wikis.
+        </li>
+        <li>
+          Import: reads your common.js, common.css, global.js or global.css, lists every page it
+          loads, and adds the ones you pick.
+        </li>
+        <li>
+          Updates: your own pages follow the wiki as you save them. A revision by another editor
+          waits until you have read its diff and approved it, and the approved revision keeps
+          running meanwhile.
+        </li>
+        <li>
+          Gadgets: add a gadget of your home wiki as one record, with its scripts and its styles.
+        </li>
+        <li>Drafts: try a change in the browser before you save it to the wiki.</li>
+        <li>
+          Page rules: run a script only in some namespaces, actions, special pages or content
+          models.
+        </li>
+        <li>
+          Activity: see when each script ran on the last 200 page loads, and why one was skipped or
+          failed.
+        </li>
+      </ul>
+      <p>
+        Only User: subpages and MediaWiki: pages can be added: pages that only their owner or the
+        wiki's administrators can edit. Uncommon reads the wikis' Action API anonymously and nothing
+        else. It never edits a wiki and sends nothing anywhere: your scripts, settings and reports
+        stay in your browser.
+      </p>
+      <p>
+        Before it can run scripts, your browser asks you to allow user scripts. In Chrome and Edge,
+        switch on "Allow User Scripts" on the extension's details page; in Firefox, choose Allow on
+        the dashboard. The dashboard shows the steps.
+      </p>
+      <p>Uncommon is in English, French, Arabic, German, Dutch and Maltese.</p>
+      <figure>
+        <img
+          src="images/en/scripts.png"
+          alt="The dashboard's list of scripts"
+          width="1280"
+          height="800"
+        />
+      </figure>
+      <figure>
+        <img
+          src="images/en/update.png"
+          alt="A revision by another editor waiting for review"
+          width="1280"
+          height="800"
+        />
+      </figure>
+    </main>
+    <footer>
+      <a href="privacy.html">Privacy policy</a> ·
+      <a href="support.html">Support</a>
+      <p>Made by Fenakhay. Released under the Mozilla Public License 2.0.</p>
+    </footer>
+  </body>
+</html>

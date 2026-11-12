@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="fr" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Uncommon : scripts utilisateur pour Wikimedia</title>
+    <meta
+      name="description"
+      content="Exécute vos scripts utilisateur sur les wikis Wikimedia depuis le navigateur, à la place de common.js, avant que la page soit prête."
+    />
+    <link rel="icon" href="../icon.png" />
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="alternate" hreflang="en" href="https://uncommon.fenakhay.com/" />
+    <link rel="alternate" hreflang="fr" href="https://uncommon.fenakhay.com/fr/" />
+    <link rel="alternate" hreflang="ar" href="https://uncommon.fenakhay.com/ar/" />
+    <link rel="alternate" hreflang="de" href="https://uncommon.fenakhay.com/de/" />
+    <link rel="alternate" hreflang="nl" href="https://uncommon.fenakhay.com/nl/" />
+    <link rel="alternate" hreflang="mt" href="https://uncommon.fenakhay.com/mt/" />
+  </head>
+  <body>
+    <nav class="languages">
+      <a href="../" hreflang="en" lang="en">English</a> · <strong>Français</strong> ·
+      <a href="../ar/" hreflang="ar" lang="ar">العربية</a> ·
+      <a href="../de/" hreflang="de" lang="de">Deutsch</a> ·
+      <a href="../nl/" hreflang="nl" lang="nl">Nederlands</a> ·
+      <a href="../mt/" hreflang="mt" lang="mt">Malti</a>
+    </nav>
+    <header>
+      <img src="../icon.png" alt="" width="96" height="96" />
+      <div>
+        <h1>Uncommon</h1>
+        <p class="summary">
+          Exécute vos scripts utilisateur sur les wikis Wikimedia depuis le navigateur, à la place
+          de common.js, avant que la page soit prête.
+        </p>
+      </div>
+    </header>
+    <main>
+      <h2>Installer</h2>
+      <p class="soon">
+        Bientôt sur le Chrome Web Store, Firefox Add-ons et Microsoft Edge Add-ons.
+      </p>
+      <p>
+        Uncommon exécute vos scripts utilisateur et vos feuilles de style Wikimedia depuis une copie
+        gardée dans votre navigateur, à la place de votre common.js.
+      </p>
+      <p>
+        Un script chargé depuis common.js attend, à chaque affichage de page, une chaîne de
+        requêtes : la page, le module de démarrage, le module user, puis une requête de plus pour
+        chaque importScript. Uncommon garde le texte de chaque script dans le navigateur, qui
+        l'injecte avant les scripts de la page. Le script n'attend que ce dont il a besoin dans la
+        page, et aucune requête n'est faite pour le script lui-même.
+      </p>
+      <ul>
+        <li>
+          Profils : un pour chaque compte wiki. Les scripts d'un profil ne s'exécutent que lorsque
+          ce compte est connecté, sur les wikis de votre choix : un, plusieurs ou tous les wikis
+          Wikimedia.
+        </li>
+        <li>
+          Importation : lit votre common.js, common.css, global.js ou global.css, liste chaque page
+          qu'il charge et ajoute celles que vous choisissez.
+        </li>
+        <li>
+          Mises à jour : vos propres pages suivent le wiki à chaque enregistrement. Une révision
+          d'un autre contributeur attend que vous ayez lu son diff et l'ayez approuvée ; la révision
+          approuvée continue de s'exécuter en attendant.
+        </li>
+        <li>
+          Gadgets : ajoutez un gadget de votre wiki d'attache comme un seul enregistrement, avec ses
+          scripts et ses styles.
+        </li>
+        <li>
+          Brouillons : essayez un changement dans le navigateur avant de l'enregistrer sur le wiki.
+        </li>
+        <li>
+          Règles de pages : n'exécutez un script que dans certains espaces de noms, actions, pages
+          spéciales ou modèles de contenu.
+        </li>
+        <li>
+          Activité : voyez quand chaque script s'est exécuté sur les 200 derniers chargements de
+          page, et pourquoi l'un d'eux a été ignoré ou a échoué.
+        </li>
+      </ul>
+      <p>
+        Seules les sous-pages User: et les pages MediaWiki: peuvent être ajoutées : des pages que
+        seuls leur propriétaire ou les administrateurs du wiki peuvent modifier. Uncommon lit l'API
+        Action des wikis de façon anonyme, et rien d'autre. Il ne modifie jamais un wiki et n'envoie
+        rien nulle part : vos scripts, vos réglages et vos rapports restent dans votre navigateur.
+      </p>
+      <p>
+        Avant de pouvoir exécuter des scripts, votre navigateur vous demande d'autoriser les scripts
+        utilisateur. Dans Chrome et Edge, activez « Autoriser les scripts utilisateur » sur la page
+        de détails de l'extension ; dans Firefox, choisissez Autoriser sur le tableau de bord. Le
+        tableau de bord montre les étapes.
+      </p>
+      <p>Uncommon est disponible en anglais, français, arabe, allemand, néerlandais et maltais.</p>
+      <figure>
+        <img
+          src="../images/fr/scripts.png"
+          alt="La liste des scripts du tableau de bord"
+          width="1280"
+          height="800"
+        />
+      </figure>
+      <figure>
+        <img
+          src="../images/fr/update.png"
+          alt="Une révision d'un autre contributeur en attente de vérification"
+          width="1280"
+          height="800"
+        />
+      </figure>
+    </main>
+    <footer>
+      <a href="../privacy.html">Politique de confidentialité</a> ·
+      <a href="../support.html">Assistance</a>
+      <p>Créé par Fenakhay. Publié sous la Mozilla Public License 2.0.</p>
+    </footer>
+  </body>
+</html>
