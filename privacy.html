@@ -11,7 +11,7 @@
     <nav class="languages"><a href="./">Uncommon</a></nav>
     <main>
       <h1>Privacy policy</h1>
-      <p class="summary">Updated on 12 November 2026, for version 1.0.0.</p>
+      <p class="summary">Updated on 12 November 2026, for version 1.1.0.</p>
 
       <p>
         Uncommon is a browser extension that runs a Wikimedia editor's userscripts and stylesheets
@@ -24,17 +24,18 @@
       <p>
         Everything Uncommon keeps stays in your browser: the usernames of your wiki accounts, the
         addresses and titles of the wiki pages your scripts ran on, and the texts of your scripts.
-        None of it is sent anywhere. The only requests Uncommon makes are anonymous queries to the
-        Wikimedia wikis your scripts come from. It has no analytics, no tracking and no advertising,
-        and its author receives no data from it.
+        The only requests Uncommon makes are anonymous queries to the Wikimedia wikis your scripts
+        come from. If you switch on its backup, which is off until you do, your browser also keeps a
+        copy of your profiles and scripts in your own browser account. Uncommon has no analytics, no
+        tracking and no advertising, and its author receives no data from it.
       </p>
 
       <h2>What Uncommon stores in your browser</h2>
       <p>Everything below is kept in the extension's own storage on your device:</p>
       <ul>
         <li>
-          your settings: the language of its pages, whether it is paused, and how often it checks
-          the wikis;
+          your settings: the language of its pages, whether it is paused, how often it checks the
+          wikis, and whether it keeps a backup in your browser account;
         </li>
         <li>your profiles: the username and the home wiki of each wiki account you add;</li>
         <li>
@@ -54,17 +55,40 @@
       <p>
         Uncommon sends requests only to the Action API (<code>/w/api.php</code>) of the Wikimedia
         wikis your records come from. It asks for the pages you added and their latest revisions,
-        for the gadgets of your home wiki when you add one, and for your <code>common.js</code>,
-        <code>global.js</code> or their stylesheets when you import them. The requests carry no
-        cookies and no login: only the titles or revision numbers asked for, and a User-Agent that
-        names Uncommon, its version and this site. What the wikis do with requests is covered by the
+        for the gadgets of your home wiki when you add one, for your <code>common.js</code>,
+        <code>global.js</code> or their stylesheets when you import them, and for the revisions a
+        backup names when you restore it. The requests carry no cookies and no login: only the
+        titles or revision numbers asked for, and a User-Agent that names Uncommon, its version and
+        this site. What the wikis do with requests is covered by the
         <a href="https://foundation.wikimedia.org/wiki/Policy:Privacy_policy"
           >Wikimedia Foundation's privacy policy</a
         >.
       </p>
       <p>
-        Uncommon sends nothing to its author or to anyone else, and it doesn't sell, share or
-        transfer data.
+        Apart from the backup below, which your browser keeps in your own account, Uncommon sends
+        nothing to its author or to anyone else, and it doesn't sell, share or transfer data.
+      </p>
+
+      <h2>The backup in your browser account</h2>
+      <p>
+        The backup is off until you switch it on in Settings. While it is on, Uncommon writes a
+        compressed copy of your settings, your profiles (the username and home wiki of each account)
+        and your records with their drafts to the browser's synced storage for extensions, a minute
+        after each change. A script from a wiki page is kept as its page and revision, without its
+        text, which a restore reads from the wiki again. The copy leaves out the reports of page
+        loads and the earlier revisions of your scripts.
+      </p>
+      <p>
+        Your browser carries the copy to your account with its own sync: Chrome to your Google
+        account and Microsoft Edge to your Microsoft account while they sync extensions, and Firefox
+        to your Mozilla account while it syncs add-ons, encrypted end to end. Google, Microsoft and
+        Mozilla hold it under their own privacy policies (<a
+          href="https://policies.google.com/privacy"
+          >Google</a
+        >, <a href="https://privacy.microsoft.com/privacystatement">Microsoft</a>,
+        <a href="https://www.mozilla.org/privacy/mozilla-accounts/">Mozilla accounts</a>). Firefox
+        asks for your consent before the first backup, and you can take it back in its add-ons
+        manager. Uncommon's author receives none of it.
       </p>
 
       <h2>The scripts you run</h2>
@@ -79,7 +103,10 @@
       <h2>Why it asks for each permission</h2>
       <ul>
         <li><strong>User scripts</strong>: to run the scripts you added.</li>
-        <li><strong>Storage</strong>: to keep what is listed above.</li>
+        <li>
+          <strong>Storage</strong>: to keep what is listed above, and the backup in your browser
+          account while it is on.
+        </li>
         <li>
           <strong>Alarms</strong>: to check the wikis for new revisions at the interval you set.
         </li>
@@ -96,8 +123,9 @@
       <h2>Removing your data</h2>
       <p>
         The Activity page clears the reports, and Settings removes a profile with its records.
-        Uninstalling the extension removes everything it stored. To keep a copy first, export the
-        state file in Settings.
+        Switching the backup off removes it from your browser account. Uninstalling the extension
+        removes everything it stored in the browser. To keep a copy first, export the state file in
+        Settings.
       </p>
 
       <h2>Changes</h2>
